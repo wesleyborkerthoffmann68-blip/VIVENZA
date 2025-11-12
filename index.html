@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIVENZA — Viver bem é viver com Vivenza</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Import map for esm.sh libraries if needed by scripts -->
+  <script type="importmap">
+  {
+    "imports": {
+      "leaflet": "https://esm.sh/leaflet@1.9.4"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main class="site">
+    <!-- Header -->
+    <header class="hero" id="top">
+      <div class="hero-card">
+        <img class="logo" src="IMG-20251107-WA0000.jpg" alt="Logo Vivenza">
+        <h1 class="title">VIVENZA</h1>
+        <p class="slogan">Viver bem é viver com Vivenza</p>
+      </div>
+    </header>
+
+    <!-- Content wrapper -->
+    <div class="container">
+      <!-- Introdução -->
+      <section class="card reveal" id="introducao" aria-labelledby="intro-title">
+        <h2 id="intro-title"><i class="fa-solid fa-leaf icon"></i> Introdução</h2>
+        <p>O projeto Vivenza surgiu a partir do trabalho de Resolução de Problemas, com o objetivo de melhorar o descarte de lixo e promover a sustentabilidade no bairro Nove Colônias, em Nova Petrópolis - RS.</p>
+      </section>
+
+      <!-- Problema Identificado -->
+      <section class="card reveal" id="problema" aria-labelledby="prob-title">
+        <h2 id="prob-title"><i class="fa-solid fa-triangle-exclamation icon"></i> Problema Identificado</h2>
+        <p>No bairro Nove Colônias, a coleta de lixo acontece apenas duas vezes por mês, o que causa acúmulo de resíduos e descarte irregular. O problema afeta o meio ambiente e a qualidade de vida dos moradores.</p>
+      </section>
+
+      <!-- Objetivos -->
+      <section class="card reveal" id="objetivos" aria-labelledby="obj-title">
+        <h2 id="obj-title"><i class="fa-solid fa-bullseye icon"></i> Objetivos</h2>
+        <ul class="objectives">
+          <li><i class="fa-solid fa-circle-check green"></i> Criar pontos de coleta seletiva no bairro.</li>
+          <li><i class="fa-solid fa-circle-check green"></i> Promover campanhas de conscientização ambiental.</li>
+          <li><i class="fa-solid fa-circle-check green"></i> Aumentar a frequência da coleta de lixo.</li>
+          <li><i class="fa-solid fa-circle-check green"></i> Envolver a comunidade nas ações sustentáveis.</li>
+        </ul>
+      </section>
+
+      <!-- Sobre o Bairro -->
+      <section class="card reveal" id="bairro" aria-labelledby="bairro-title">
+        <h2 id="bairro-title"><i class="fa-solid fa-map-pin icon"></i> Sobre o Bairro Nove Colônias</h2>
+        <p>O bairro é conhecido pela natureza preservada e pelo clima rural. Apesar da tranquilidade e da beleza natural, enfrenta dificuldades com o recolhimento adequado dos resíduos.</p>
+      </section>
+
+      <!-- Funções -->
+      <section class="card reveal" id="funcoes" aria-labelledby="funcoes-title">
+        <h2 id="funcoes-title"><i class="fa-solid fa-users-line icon"></i> Funções no Projeto</h2>
+        <div class="roles-grid">
+          <div class="role-card">
+            <h3>Bianca Barbosa — Diretora, Fotógrafa, Marketing Digital</h3>
+            <p>Coordena a equipe e a estratégia do projeto; registra visualmente ações e campanhas e gerencia a presença digital para engajamento comunitário.</p>
+          </div>
+          <div class="role-card">
+            <h3>Sofia de Oliveira — Vice‑Diretora, Educadora Ambiental</h3>
+            <p>Apoia a direção e lidera programas educativos junto à comunidade, promovendo práticas sustentáveis e capacitação sobre gestão de resíduos.</p>
+          </div>
+          <div class="role-card">
+            <h3>Juliana Rauch — Designer Gráfico, Gestora de Projetos</h3>
+            <p>Desenvolve comunicação visual clara e materiais informativos; organiza prazos, recursos e coordenação entre as frentes do projeto.</p>
+          </div>
+          <div class="role-card">
+            <h3>Vinícius Bayer — Agente de Limpeza Urbana, Economista</h3>
+            <p>Planeja e executa rotinas de limpeza e logística de resíduos; analisa custos e modelos econômicos para sustentabilidade financeira do projeto.</p>
+          </div>
+          <div class="role-card highlight">
+            <h3>Wesley Borkert — Engenheiro Ambiental, Fiscal Ambiental</h3>
+            <p>Projeta soluções técnicas para tratamento e redução de resíduos e fiscaliza a conformidade ambiental das ações implementadas.</p>
+          </div>
+          <div class="role-card">
+            <h3>Anderson Buss — Técnico em Saneamento, Geógrafo</h3>
+            <p>Define pontos de coleta eficientes e projetos de infraestrutura sanitária; realiza estudos de campo e mapeamento dos impactos territoriais.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Localização e Pontos de Coleta -->
+      <section class="card reveal" id="localizacao" aria-labelledby="loc-title">
+        <h2 id="loc-title"><i class="fa-solid fa-location-dot icon"></i> Localização e Pontos de Coleta</h2>
+
+        <div class="coords">
+          <pre>29°23'34"S 51°00'19"W
+29°23'15"S 51°00'10"W
+29°23'14"S 50°59'30"W
+29°23'25"S 50°59'01"W</pre>
+        </div>
+
+        <div id="map" class="map"></div>
+
+        <!-- New: Map controls (refresh / reset view) -->
+        <div class="map-controls">
+          <button id="refreshMap" class="map-btn" title="Recarregar mapa e voltar à vista original">
+            <i class="fa-solid fa-arrows-rotate"></i> Recarregar mapa
+          </button>
+        </div>
+      </section>
+
+      <!-- Conclusão -->
+      <section class="card reveal" id="conclusao" aria-labelledby="conc-title">
+        <h2 id="conc-title"><i class="fa-solid fa-globe icon"></i> Conclusão</h2>
+        <p>O projeto Vivenza busca unir tecnologia e consciência ambiental para transformar a realidade local. Através da colaboração dos moradores e das autoridades, é possível construir um futuro mais limpo e sustentável.</p>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <img class="footer-logo" src="IMG-20251107-WA0000.jpg" alt="Logo Vivenza">
+        <p class="footer-slogan"><strong>Viver bem é viver com Vivenza</strong></p>
+      </div>
+
+      <!-- Contact section added: social links with icons -->
+      <div class="contact">
+        <div class="contact-links" role="navigation" aria-label="Meios de contato Vivenza">
+          <a class="contact-link" href="https://www.instagram.com/vivercomvivenza?igsh=MTVxdWtkbHMzbGlocg==" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram: @vivercomvivenza</span>
+          </a>
+
+          <a class="contact-link" href="https://wa.me/5554996960989" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp: +55 (54) 99696-0989</span>
+          </a>
+
+          <a class="contact-link" href="https://x.com/VivenzaNP" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X: @VivenzaNP</span>
+          </a>
+
+          <a class="contact-link" href="https://www.facebook.com/share/1brgPoAG7R/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook: Vivenza NP</span>
+          </a>
+        </div>
+      </div>
+
+      <p>Projeto desenvolvido por Sofia, Bianca, Andy Kauê e Wesley.<br>Escola Bom Pastor — 2025.</p>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="backTop" aria-label="Voltar ao topo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+  </main>
+
+  <script type="module" src="script.js"></script>
+  <!-- Leaflet JS (for browsers without esm import support fallback) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
